@@ -1,0 +1,98 @@
+[
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "logging",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "logging",
+        "description": "logging",
+        "detail": "logging",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "datetime",
+        "description": "datetime",
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "homePage",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def homePage() :\n    logging.info(f'{datetime.datetime.now()} : Homepage opened')\n    return render_template('index.html')\n@app.route('/submittedsuccessfully', methods=['GET', 'POST'])\ndef fileParsing() :\n    logging.info(f'{datetime.datetime.now()} : Form filled Successfully')\n    if request.method == 'POST' :\n        fullName = request.form.get('full_name')\n        email = request.form.get('email')\n        phone = request.form.get('phone')",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "fileParsing",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def fileParsing() :\n    logging.info(f'{datetime.datetime.now()} : Form filled Successfully')\n    if request.method == 'POST' :\n        fullName = request.form.get('full_name')\n        email = request.form.get('email')\n        phone = request.form.get('phone')\n        resume = request.files['resume']\n        if resume :\n            filename = os.path.join(r'C:\\Users\\dushy\\OneDrive\\Documents\\DK Projects\\Resume Parser\\ImportedFiles', resume.filename)\n            resume.save(filename)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "app = Flask(__name__)\nfileName = str(time.time())\nlogging.basicConfig(filename=f'logs/{fileName}.log', encoding='utf-8', level=logging.DEBUG)\n@app.route('/')\ndef homePage() :\n    logging.info(f'{datetime.datetime.now()} : Homepage opened')\n    return render_template('index.html')\n@app.route('/submittedsuccessfully', methods=['GET', 'POST'])\ndef fileParsing() :\n    logging.info(f'{datetime.datetime.now()} : Form filled Successfully')",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "fileName",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "fileName = str(time.time())\nlogging.basicConfig(filename=f'logs/{fileName}.log', encoding='utf-8', level=logging.DEBUG)\n@app.route('/')\ndef homePage() :\n    logging.info(f'{datetime.datetime.now()} : Homepage opened')\n    return render_template('index.html')\n@app.route('/submittedsuccessfully', methods=['GET', 'POST'])\ndef fileParsing() :\n    logging.info(f'{datetime.datetime.now()} : Form filled Successfully')\n    if request.method == 'POST' :",
+        "detail": "app",
+        "documentation": {}
+    }
+]
