@@ -1,8 +1,0 @@
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 117-785-080
-INFO:root:2023-08-10 16:01:07.072170 : Homepage opened
-INFO:werkzeug:127.0.0.1 - - [10/Aug/2023 16:01:07] "GET / HTTP/1.1" 200 -
-INFO:root:2023-08-10 16:01:15.908597 : Form filled Successfully
-ERROR:root:2023-08-10 16:01:15.965512 - Unable to read the file and Error = 'charmap' codec can't decode byte 0x81 in position 10: character maps to <undefined>
-INFO:werkzeug:127.0.0.1 - - [10/Aug/2023 16:01:15] "POST /submittedsuccessfully HTTP/1.1" 200 -
-INFO:werkzeug: * Detected change in 'c:\\Users\\dushy\\OneDrive\\Documents\\DK Projects\\Resume Parser\\app.py', reloading

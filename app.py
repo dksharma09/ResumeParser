@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 try :
     fileName = str(time.time())
-    logging.basicConfig(filename=f'logs/{fileName}.log', encoding='utf-8', level=logging.DEBUG)
+    logging.basicConfig(filename=f'LogsAPI/{fileName}.log', encoding='utf-8', level=logging.DEBUG)
 except FileExistsError as e :
     print(f'Error : {e}')
 except Exception as e :
@@ -32,7 +32,9 @@ def fileParsing() :
             logging.error(f'{datetime.datetime.now()} - Unable to read data from form and Error = {e}')
         
         if resume :
-            try : 
+            try :
+                # file = resume.read()
+                # print(file)
                 filename = os.path.join(r'C:\Users\dushy\OneDrive\Documents\DK Projects\Resume Parser\ImportedFiles', resume.filename)
                 resume.save(filename)
             except FileExistsError as e :

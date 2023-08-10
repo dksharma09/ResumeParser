@@ -82,8 +82,35 @@
         "kind": 5,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "app = Flask(__name__)\ntry :\n    fileName = str(time.time())\n    logging.basicConfig(filename=f'logs/{fileName}.log', encoding='utf-8', level=logging.DEBUG)\nexcept FileExistsError as e :\n    print(f'Error : {e}')\nexcept Exception as e :\n    print(f'Error : {e}')\n@app.route('/')\ndef homePage() :",
+        "peekOfCode": "app = Flask(__name__)\ntry :\n    fileName = str(time.time())\n    logging.basicConfig(filename=f'LogsAPI/{fileName}.log', encoding='utf-8', level=logging.DEBUG)\nexcept FileExistsError as e :\n    print(f'Error : {e}')\nexcept Exception as e :\n    print(f'Error : {e}')\n@app.route('/')\ndef homePage() :",
         "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "fileName",
+        "kind": 5,
+        "importPath": "resume_parsing",
+        "description": "resume_parsing",
+        "peekOfCode": "fileName = str(time.time())\nlogging.basicConfig(filename=f'LogsResumeParsing/{fileName}.log', encoding='utf-8', level=logging.DEBUG)\nfolderPath = r'C:\\Users\\dushy\\OneDrive\\Documents\\DK Projects\\Resume Parser\\ImportedFiles'\nfileList = os.listdir(folderPath)\nfor file in fileList :\n    print(file)\n    logging.info(f'{datetime.datetime.now()} : {file}')\n    filePath = os.path.join(folderPath, file)\n    print(filePath)\n    with open(filePath, 'r', encoding='utf-8') as f:",
+        "detail": "resume_parsing",
+        "documentation": {}
+    },
+    {
+        "label": "folderPath",
+        "kind": 5,
+        "importPath": "resume_parsing",
+        "description": "resume_parsing",
+        "peekOfCode": "folderPath = r'C:\\Users\\dushy\\OneDrive\\Documents\\DK Projects\\Resume Parser\\ImportedFiles'\nfileList = os.listdir(folderPath)\nfor file in fileList :\n    print(file)\n    logging.info(f'{datetime.datetime.now()} : {file}')\n    filePath = os.path.join(folderPath, file)\n    print(filePath)\n    with open(filePath, 'r', encoding='utf-8') as f:\n        content = f.read()\n        print(f\"Content of {file}:\")",
+        "detail": "resume_parsing",
+        "documentation": {}
+    },
+    {
+        "label": "fileList",
+        "kind": 5,
+        "importPath": "resume_parsing",
+        "description": "resume_parsing",
+        "peekOfCode": "fileList = os.listdir(folderPath)\nfor file in fileList :\n    print(file)\n    logging.info(f'{datetime.datetime.now()} : {file}')\n    filePath = os.path.join(folderPath, file)\n    print(filePath)\n    with open(filePath, 'r', encoding='utf-8') as f:\n        content = f.read()\n        print(f\"Content of {file}:\")\n        print(content)",
+        "detail": "resume_parsing",
         "documentation": {}
     }
 ]
