@@ -6,8 +6,14 @@ import datetime
 
 app = Flask(__name__)
 
-fileName = str(time.time())
-logging.basicConfig(filename=f'logs/{fileName}.log', encoding='utf-8', level=logging.DEBUG)
+try :
+    fileName = str(time.time())
+    logging.basicConfig(filename=f'logs/{fileName}.log', encoding='utf-8', level=logging.DEBUG)
+except FileExistsError as e :
+    print(f'Error : {e}')
+except Exception as e :
+    print(f'Error : {e}')
+    
 @app.route('/')
 def homePage() :
     logging.info(f'{datetime.datetime.now()} : Homepage opened')
@@ -17,29 +23,33 @@ def homePage() :
 def fileParsing() :
     logging.info(f'{datetime.datetime.now()} : Form filled Successfully')
     if request.method == 'POST' :
-        fullName = request.form.get('full_name')
-        email = request.form.get('email')
-        phone = request.form.get('phone')
-        resume = request.files['resume']
+        try : 
+            fullName = request.form.get('full_name')
+            email = request.form.get('email')
+            phone = request.form.get('phone')
+            resume = request.files['resume']
+        except Exception as e :
+            logging.error(f'{datetime.datetime.now()} - Unable to read data from form and Error = {e}')
         
         if resume :
-            filename = os.path.join(r'C:\Users\dushy\OneDrive\Documents\DK Projects\Resume Parser\ImportedFiles', resume.filename)
-            resume.save(filename)
+            try : 
+                filename = os.path.join(r'C:\Users\dushy\OneDrive\Documents\DK Projects\Resume Parser\ImportedFiles', resume.filename)
+                resume.save(filename)
+            except FileExistsError as e :
+                logging.error(f'{datetime.datetime.now()} - Unable to save the file and Error = {e}')
             try :
-                f = open(filename)
-                content = f.read()
-                print(content)
-                f.close()
+                file_path = f'C:\\Users\\dushy\\OneDrive\\Documents\\DK Projects\\Resume Parser\\ImportedFiles\\{resume.filename}'
+                with open(file_path, 'r', encoding='iso-8859-1') as f:
+                    content = f.read()
+                    # print(content)
             except Exception as e :
                 print(e)
+                logging.error(f'{datetime.datetime.now()} - Unable to read the file and Error = {e}')
             
         else :
             return 'Resume not uploaded.'
         # print(fullName, email, phone, resumeName)
         return render_template('output.html', fullName=fullName, email=email, phone=phone, resumeName=resume.filename)
         
-        
-
-
 if __name__ == '__main__' :
     app.run(debug=True)
