@@ -60,6 +60,14 @@
         "documentation": {}
     },
     {
+        "label": "PdfReader",
+        "importPath": "PyPDF2",
+        "description": "PyPDF2",
+        "isExtraImport": true,
+        "detail": "PyPDF2",
+        "documentation": {}
+    },
+    {
         "label": "homePage",
         "kind": 2,
         "importPath": "app",
@@ -91,7 +99,7 @@
         "kind": 5,
         "importPath": "resume_parsing",
         "description": "resume_parsing",
-        "peekOfCode": "fileName = str(time.time())\nlogging.basicConfig(filename=f'LogsResumeParsing/{fileName}.log', encoding='utf-8', level=logging.DEBUG)\nfolderPath = r'C:\\Users\\dushy\\OneDrive\\Documents\\DK Projects\\Resume Parser\\ImportedFiles'\nfileList = os.listdir(folderPath)\nfor file in fileList :\n    print(file)\n    logging.info(f'{datetime.datetime.now()} : {file}')\n    filePath = os.path.join(folderPath, file)\n    print(filePath)\n    with open(filePath, 'r', encoding='utf-8') as f:",
+        "peekOfCode": "fileName = str(time.time())\nlogging.basicConfig(filename=f'LogsResumeParsing/{fileName}.log', encoding='utf-8', level=logging.DEBUG)\nfolderPath = r'C:\\Users\\dushy\\OneDrive\\Documents\\DK Projects\\Resume Parser\\ImportedFiles'\nfileList = os.listdir(folderPath)\nfor file in fileList :\n    # print(file)\n    logging.info(f'{datetime.datetime.now()} : {file}')\n    filePath = os.path.join(folderPath, file)\n    reader = PdfReader(filePath)\n    number_of_pages = len(reader.pages)",
         "detail": "resume_parsing",
         "documentation": {}
     },
@@ -100,7 +108,7 @@
         "kind": 5,
         "importPath": "resume_parsing",
         "description": "resume_parsing",
-        "peekOfCode": "folderPath = r'C:\\Users\\dushy\\OneDrive\\Documents\\DK Projects\\Resume Parser\\ImportedFiles'\nfileList = os.listdir(folderPath)\nfor file in fileList :\n    print(file)\n    logging.info(f'{datetime.datetime.now()} : {file}')\n    filePath = os.path.join(folderPath, file)\n    print(filePath)\n    with open(filePath, 'r', encoding='utf-8') as f:\n        content = f.read()\n        print(f\"Content of {file}:\")",
+        "peekOfCode": "folderPath = r'C:\\Users\\dushy\\OneDrive\\Documents\\DK Projects\\Resume Parser\\ImportedFiles'\nfileList = os.listdir(folderPath)\nfor file in fileList :\n    # print(file)\n    logging.info(f'{datetime.datetime.now()} : {file}')\n    filePath = os.path.join(folderPath, file)\n    reader = PdfReader(filePath)\n    number_of_pages = len(reader.pages)\n    logging.info(f'{datetime.datetime.now()} : Number of Pages = {number_of_pages}')\n    page = reader.pages[0]",
         "detail": "resume_parsing",
         "documentation": {}
     },
@@ -109,7 +117,7 @@
         "kind": 5,
         "importPath": "resume_parsing",
         "description": "resume_parsing",
-        "peekOfCode": "fileList = os.listdir(folderPath)\nfor file in fileList :\n    print(file)\n    logging.info(f'{datetime.datetime.now()} : {file}')\n    filePath = os.path.join(folderPath, file)\n    print(filePath)\n    with open(filePath, 'r', encoding='utf-8') as f:\n        content = f.read()\n        print(f\"Content of {file}:\")\n        print(content)",
+        "peekOfCode": "fileList = os.listdir(folderPath)\nfor file in fileList :\n    # print(file)\n    logging.info(f'{datetime.datetime.now()} : {file}')\n    filePath = os.path.join(folderPath, file)\n    reader = PdfReader(filePath)\n    number_of_pages = len(reader.pages)\n    logging.info(f'{datetime.datetime.now()} : Number of Pages = {number_of_pages}')\n    page = reader.pages[0]\n    text = page.extract_text()",
         "detail": "resume_parsing",
         "documentation": {}
     }

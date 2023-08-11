@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\dushy\OneDrive\Documents\DK Projects\New\env"
+VIRTUAL_ENV="C:\Users\dushy\OneDrive\Documents\DK Projects\Resume Parser\env"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
