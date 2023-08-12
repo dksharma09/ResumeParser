@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for
 import os
 import logging
 import time
@@ -28,6 +28,8 @@ def fileParsing() :
             email = request.form.get('email')
             phone = request.form.get('phone')
             resume = request.files['resume']
+            # if fullName == 'Dushyant' :
+            #     return redirect(url_for('dk'))
         except Exception as e :
             logging.error(f'{datetime.datetime.now()} - Unable to read data from form and Error = {e}')
         
@@ -52,6 +54,13 @@ def fileParsing() :
             return 'Resume not uploaded.'
         # print(fullName, email, phone, resumeName)
         return render_template('output.html', fullName=fullName, email=email, phone=phone, resumeName=resume.filename)
+    
+
+# @app.route('/submittedsuccessfully/yourname')
+# def dk() :
+#     # logging.info(f'{datetime.datetime.now()} : Homepage opened')
+#     return 'This is Dushyant here'
+ 
         
 if __name__ == '__main__' :
     app.run(debug=True)

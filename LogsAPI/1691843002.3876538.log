@@ -1,0 +1,8 @@
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 664-782-717
+INFO:root:2023-08-12 17:53:29.136665 : Homepage opened
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2023 17:53:29] "GET / HTTP/1.1" 200 -
+INFO:root:2023-08-12 17:53:42.076116 : Form filled Successfully
+ERROR:root:2023-08-12 17:53:42.079143 - Unable to read data from form and Error = Could not build url for endpoint 'dk'. Did you mean 'static' instead?
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2023 17:53:42] "POST /submittedsuccessfully HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Dushyant\\ResumeParser\\app.py', reloading

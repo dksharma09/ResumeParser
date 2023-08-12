@@ -1,0 +1,7 @@
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 664-782-717
+INFO:root:2023-08-12 17:29:19.675898 : Homepage opened
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2023 17:29:19] "GET / HTTP/1.1" 200 -
+INFO:root:2023-08-12 17:29:32.227737 : Form filled Successfully
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2023 17:29:32] "[32mPOST /submittedsuccessfully HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2023 17:29:32] "GET /submittedsuccessfully/yourname HTTP/1.1" 200 -
