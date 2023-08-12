@@ -35,12 +35,12 @@ def fileParsing() :
             try :
                 # file = resume.read()
                 # print(file)
-                filename = os.path.join(r'C:\Users\dushy\OneDrive\Documents\DK Projects\Resume Parser\ImportedFiles', resume.filename)
+                filename = os.path.join(r'ImportedFiles', resume.filename)
                 resume.save(filename)
             except FileExistsError as e :
                 logging.error(f'{datetime.datetime.now()} - Unable to save the file and Error = {e}')
             try :
-                file_path = f'C:\\Users\\dushy\\OneDrive\\Documents\\DK Projects\\Resume Parser\\ImportedFiles\\{resume.filename}'
+                file_path = f'ImportedFiles\\{resume.filename}'
                 with open(file_path, 'r', encoding='iso-8859-1') as f:
                     content = f.read()
                     # print(content)

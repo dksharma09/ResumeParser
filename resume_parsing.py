@@ -7,7 +7,7 @@ from PyPDF2 import PdfReader
 fileName = str(time.time())
 logging.basicConfig(filename=f'LogsResumeParsing/{fileName}.log', encoding='utf-8', level=logging.DEBUG)
 
-folderPath = r'C:\Users\dushy\OneDrive\Documents\DK Projects\Resume Parser\ImportedFiles'
+folderPath = r'importedFiles'
 
 fileList = os.listdir(folderPath)
 

@@ -1,0 +1,7 @@
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 100-303-209
+INFO:root:2023-08-12 13:25:23.630234 : Homepage opened
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2023 13:25:23] "GET / HTTP/1.1" 200 -
+INFO:root:2023-08-12 13:25:37.579533 : Form filled Successfully
+ERROR:root:2023-08-12 13:25:37.584069 - Unable to read the file and Error = [Errno 2] No such file or directory: 'C:\\Users\\dushy\\OneDrive\\Documents\\DK Projects\\Resume Parser\\ImportedFiles\\invoice (5).pdf'
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2023 13:25:37] "POST /submittedsuccessfully HTTP/1.1" 200 -

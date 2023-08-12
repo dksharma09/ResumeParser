@@ -1,0 +1,11 @@
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 100-303-209
+INFO:root:2023-08-12 13:23:38.676570 : Homepage opened
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2023 13:23:38] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2023 13:23:38] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:root:2023-08-12 13:23:58.905503 : Form filled Successfully
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2023 13:23:58] "[35m[1mPOST /submittedsuccessfully HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2023 13:23:59] "[36mGET /submittedsuccessfully?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2023 13:23:59] "[36mGET /submittedsuccessfully?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2023 13:23:59] "[36mGET /submittedsuccessfully?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Dushyant\\ResumeParser\\app.py', reloading
